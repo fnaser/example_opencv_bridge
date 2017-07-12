@@ -1,0 +1,19 @@
+<package>
+  <description brief="example_opencv_bridge">
+
+     example_opencv_bridge
+
+  </description>
+  <author>fnaser</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/example_opencv_bridge</url>
+  <depend package="sensor_msgs"/>
+  <depend package="opencv3"/>
+  <depend package="cv_bridge"/>
+  <depend package="rospy"/>
+  <depend package="std_msgs"/>
+
+</package>
+
+
