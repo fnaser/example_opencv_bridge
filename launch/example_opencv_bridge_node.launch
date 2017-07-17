@@ -9,14 +9,14 @@
     <arg name="node_type" default="example_opencv_bridge_node.py" doc="name of the type."/>
     <arg name="node_name" default="example_opencv_bridge_node" doc="name of the type."/>
 
-    <arg name="ptgrey" default="false"/>
-    <arg name="usb" default="true"/>
+    <arg name="ptgrey" default="true"/>
+    <arg name="usb" default="false"/>
 
     <node pkg="$(arg pkg_name)" name="$(arg node_name)" type="$(arg node_type)" output="$(arg output)" required="$(arg req)">
       <!-- PTGrey -->
       <remap from="ros_image_topic" to="/pointgrey/image_raw" if="$(arg ptgrey)"/>
       <!-- USB -->
-      <remap from="ros_image_topic" to="/white_prius/usb_cam_front/image_raw" if="$(arg usb)"/>
+      <remap from="ros_image_topic" to="/usb_cam/image_raw" if="$(arg usb)"/>
     </node>
 
 </launch>
